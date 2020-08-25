@@ -25,7 +25,7 @@
 #define SAMPLE_SELECT_H
 
 // You can try each sample program by changing the following macro.
-#define SAMPLE_PROGRAM_NO  0
+#define SAMPLE_PROGRAM_NO  22
 
 // No.  Program file                   Description
 //
@@ -51,5 +51,9 @@
 // 19 : sample_19_mipi_drp_diplayapp   MIPI, DRP and USBSerial (CDC) sample (use "DisplayApp")
 // 20 : sample_20_drp_dynamic_loading  DRP Dynamic Loading Sample
 // 21 : sample_21_deep_standby_alarm   Deep standby and RTC alarm sample
+// 22 : main.cpp
+#ifndef TARGET_RZ_A2M_EVB
+#define TARGET_RZ_A2M_EVB
+#endif
 
 #endif // SAMPLE_SELECT_H
