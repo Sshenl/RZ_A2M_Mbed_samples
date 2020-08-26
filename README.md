@@ -1,3 +1,4 @@
+forked from [d-kato/RZ_A2M_Mbed_samples](https://github.com/d-kato/RZ_A2M_Mbed_samples)
 # RZ_A2M_Mbed_samples
 This is a collection of sample programs that work on RZ/A2M boards.  
 You can try Mbed OS for RZ/A2M with the following board.
