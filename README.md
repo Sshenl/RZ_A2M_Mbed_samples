@@ -10,10 +10,10 @@
 * 此工程以[d-kato/RZ_A2M_Mbed_samples](https://github.com/d-kato/RZ_A2M_Mbed_samples)为模板
 * 主函数：[sample_22_main.cpp](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/sample_programs/sample_22_main.cpp)
 * 主要库文件：
-*   DDS模块驱动函数库：[mylibs/AD9850.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/AD9850.h)
-*   显示屏驱动函数库：[mylibs/OCM_driver.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/OCM_driver.h)
-*   数字滤波器函数库：[mylibs/filter.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/filter.h)
-*   人机交互界面有关函数库：[mylibs/LCD_disp.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/LCD_disp.h)
+  * DDS模块驱动函数库：[mylibs/AD9850.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/AD9850.h)
+  * 显示屏驱动函数库：[mylibs/OCM_driver.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/OCM_driver.h)
+  * 数字滤波器函数库：[mylibs/filter.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/filter.h)
+  * 人机交互界面有关函数库：[mylibs/LCD_disp.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/LCD_disp.h)
 ## 要求
 * 硬件要求：RZ/A2M Evaluation Board Kit
 * 开发环境：Mbed Studio
