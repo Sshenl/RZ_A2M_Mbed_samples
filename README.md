@@ -14,6 +14,6 @@
   * 显示屏驱动函数库：[mylibs/OCM_driver.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/OCM_driver.h)
   * 数字滤波器函数库：[mylibs/filter.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/filter.h)
   * 人机交互界面有关函数库：[mylibs/LCD_disp.h](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/mylibs/LCD_disp.h)
-## 要求
+## 防御装置要求
 * 硬件要求：RZ/A2M Evaluation Board Kit
 * 开发环境：Mbed Studio
