@@ -5,7 +5,7 @@
 
 ## 代码结构
 ### 攻击装置：
-* 超声攻击信号生成：[attack_generator.m](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/attack_generator.m)
+* 超声攻击信号生成：[attack_generator.m](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/MATLAB_code/attack_generator.m)
 ### 防御装置：
 * 此工程以[d-kato/RZ_A2M_Mbed_samples](https://github.com/d-kato/RZ_A2M_Mbed_samples)为模板
 * 主函数：[sample_22_main.cpp](https://github.com/Sshenl/RZ_A2M_Mbed_samples/blob/master/sample_programs/sample_22_main.cpp)
