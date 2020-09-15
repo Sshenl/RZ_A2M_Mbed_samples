@@ -1,15 +1,15 @@
 clear;close all;
 
-% Ö¸Áî
-[instruction, FS] = audioread('english3.m4a');
+% æŒ‡ä»¤
+[instruction, FS] = audioread('english.m4a');
 
-% ÓïÒôÖúÊÖ»½ĞÑ¿ÚÁî
+% è¯­éŸ³åŠ©æ‰‹å”¤é†’å£ä»¤
 [key, FS] = audioread('yoyo.m4a');
 %key = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]';
 %key = key(floor(size(key,1)*2/7):floor(size(key,1)*6/7), :);
 
 
-% ¹éÒ»»¯
+% å½’ä¸€åŒ–
  key(:,1) = key(:,1)/max(key(:,1));
  key(:,2) = key(:,2)/max(key(:,2));
 instruction(:,1) = instruction(:,1)/max(instruction(:,1));
@@ -18,16 +18,16 @@ instruction(:,2) = instruction(:,2)/max(instruction(:,2));
 key = [key; instruction];
 
 
-% Ô­Ê¼ÒôÆµ²¨ĞÎ
+% åŸå§‹éŸ³é¢‘æ³¢å½¢
 figure; plot(instruction) 
 title('original audio');
 
-% Éı²ÉÑù
+% å‡é‡‡æ ·
 fs = 96000;
 instruction = resample(instruction,fs, FS);
 key = resample(key,fs, FS);
 
-% µÍÍ¨ÂË²¨
+% ä½é€šæ»¤æ³¢
 lowpass = lowpass_5khz;
 instruction = filter(lowpass, instruction);
 instruction(:,1) = instruction(:,1)/max(instruction(:,1));
@@ -37,25 +37,25 @@ key = filter(lowpass, key);
 key(:,1) = key(:,1)/max(key(:,1));
 key(:,2) = key(:,2)/max(key(:,2));
 
-% Ö¸ÁîµÄ¹¥»÷ĞÅºÅÉú³É£¨²»¿ÉÆÆ½âÉùÎÆ£©
+% æŒ‡ä»¤çš„æ”»å‡»ä¿¡å·ç”Ÿæˆï¼ˆä¸å¯ç ´è§£å£°çº¹ï¼‰
 sig_mod1 = instruction + 1;
 
-% ÓïÒôÖúÊÖ»½ĞÑ¿ÚÁîµÄ¹¥»÷ĞÅºÅÉú³É£¨¿ÉÆÆ½âÉùÎÆ£©
+% è¯­éŸ³åŠ©æ‰‹å”¤é†’å£ä»¤çš„æ”»å‡»ä¿¡å·ç”Ÿæˆï¼ˆå¯ç ´è§£å£°çº¹ï¼‰
 sig_mod2 = key + 1;
 k = 0.75;
 test1 = (-k+sqrt(k*k+4*sig_mod2))/2;
 test1(:,1) = test1(:,1)/max(test1(:,1));
 test1(:,2) = test1(:,2)/max(test1(:,2));
 
-% µ÷ÖÆÆµÂÊ
+% è°ƒåˆ¶é¢‘ç‡
 fc = 28000;
 highpass = highpass_21khz;
 
-% Ö¸Áîµ÷ÖÆ
+% æŒ‡ä»¤è°ƒåˆ¶
 ultrasond1 = modulate(sig_mod1,fc,fs,'am');
 ultrasond1 = filter(highpass, ultrasond1);
 
-% ÓïÒôÖúÊÖ»½ĞÑ¿ÚÁîµ÷ÖÆ
+% è¯­éŸ³åŠ©æ‰‹å”¤é†’å£ä»¤è°ƒåˆ¶
 ultra_test1 = modulate(test1,fc,fs,'am');
 ultra_test1 = filter(highpass, ultra_test1);
 ultra_test1(:,1) = ultra_test1(:,1)/max(ultra_test1(:,1));
